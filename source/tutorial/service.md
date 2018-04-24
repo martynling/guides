@@ -246,7 +246,7 @@ and are intended for testing specific logic within a class.
 
 For our service unit test, we'll want to verify that locations that have been previously loaded are fetched from cache, while new locations are created using the utility.
 We will isolate our tests from actually calling Google Maps by stubbing our map utility.
-On line 6 of `maps-test.js` below we create an Ember object to simulate the behavior of the utility, but instead of creating a google map, we return an empty JavaScript object.
+On line 19 of `maps-test.js` below we create a Javascript object to simulate the behavior of the utility, but instead of creating a google map, we return an empty JavaScript object.
 
 To instantiate the service, we can instantiate it through ember's resolver using the [`factoryFor`](https://emberjs.com/api/ember/release/classes/ApplicationInstance/methods/factoryFor?anchor=factoryFor) method.
 `factoryFor` allows us to have control over the creation of the service in Ember, to pass arguments to the constructor that can override parts of the service for our tests.

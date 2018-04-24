@@ -243,6 +243,7 @@ You may now either move onto the [next feature](../subroutes/), or continue here
 We'll use a unit test to validate the service.
 Unit tests are more isolated than integration tests and application tests,
 and are intended for testing specific logic within a class.
+(Note: you should restart `ember test --server` whenever you add a new service, otherwise the new service will not be available to your unit tests).
 
 For our service unit test, we'll want to verify that locations that have been previously loaded are fetched from cache, while new locations are created using the utility.
 We will isolate our tests from actually calling Google Maps by stubbing our map utility.
